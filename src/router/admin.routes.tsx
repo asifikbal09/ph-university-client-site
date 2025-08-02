@@ -4,12 +4,23 @@ import CreateFaculty from "../pages/admin/CreateFaculty";
 import CreateStudent from "../pages/admin/CreateStudent";
 import { NavLink } from "react-router";
 import type { TSidebarItem } from "../types";
+import AcademicSemester from "../pages/admin/academicManagement/AcademicSemester";
 
 export const adminPath = [
   {
     name: "Dashboard",
     path: "dashboard",
     element: <AdminDashboard />,
+  },
+  {
+    name:"Academic Management",
+    children:[
+      {
+        name:"Academic Semester",
+        path:"academic-semester",
+        element:<AcademicSemester/>
+      }
+    ]
   },
   {
     name: "User Management",
